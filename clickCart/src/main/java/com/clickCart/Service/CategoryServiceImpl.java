@@ -1,6 +1,7 @@
 package com.clickCart.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,19 +26,36 @@ public class CategoryServiceImpl implements CategoryService {
 	@Override
 	public Category getCategory(Integer id) throws CategoryException {
 		// TODO Auto-generated method stub
-		return null;
+		    Optional <Category>  opt = cRepo.findById(id); 
+		     if(opt.isEmpty()) { 
+		    	 throw new CategoryException("category does not exist with this id");
+		    	 
+		     }
+		    Category cat = opt.get();
+		return cat;
 	}
 
 	@Override
-	public Category deleteCategory(Integer id) throws CategoryException {
+	public String deleteCategory(Integer id) throws CategoryException {
 		// TODO Auto-generated method stub
-		return null;
-	}
+		 Optional <Category>  opt = cRepo.findById(id); 
+	     if(opt.isEmpty()) { 
+	    	 throw new CategoryException("category does not exist with this id");
+	    	 
+	     }
+	    Category cat =  opt.get(); 
+	           cRepo.delete(cat);
+	return "Category deleted successfully";
+	}	
 
 	@Override
 	public List<Category> getAllCategory() throws CategoryException {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
+		List<Category> list = cRepo.findAll() ;
+		 if(list.size()==0) { 
+			 throw new CategoryException("no category found ");
+			 }
+		 return list;
+		 }
+		
 }
