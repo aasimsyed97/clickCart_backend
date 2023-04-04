@@ -1,5 +1,7 @@
 package com.clickCart.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,24 @@ public class CategoryServiceImpl implements CategoryService {
 		// TODO Auto-generated method stub 
 		    Category savedCategory =  cRepo.save(category);
 		return savedCategory;
+	}
+
+	@Override
+	public Category getCategory(Integer id) throws CategoryException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Category deleteCategory(Integer id) throws CategoryException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Category> getAllCategory() throws CategoryException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
