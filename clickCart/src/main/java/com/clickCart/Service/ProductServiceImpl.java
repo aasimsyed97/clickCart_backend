@@ -22,11 +22,9 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public Product createProduct(Product product) throws ProductException {
 		// TODO Auto-generated method stub
-		 Optional<Product> op = pRepo.findById(product.getId());
-		  if(op.isEmpty()) { 
-			  throw new ProductException("product with this id already exist");
-		  }
-		return op.get();
+		
+		      Product p = pRepo.save(product);
+		return p;
 	}
 
 	@Override

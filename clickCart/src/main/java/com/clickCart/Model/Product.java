@@ -5,11 +5,12 @@ import jakarta.persistence.*;
 
 @Entity
 public class Product { 
+	
 	@Id 
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer Id;
 	private String name;
-	private String desc;
+	private String description;
 	private String url;
 	private Integer price;
 	
@@ -20,11 +21,11 @@ public class Product {
 	}
 
 
-	public Product(Integer id, String name, String desc, String url, Integer price) {
+	public Product( String name, String desc, String url, Integer price) {
 		super();
-		Id = id;
+		
 		this.name = name;
-		this.desc = desc;
+		this.description = desc;
 		this.url = url;
 		this.price = price;
 	}
@@ -50,13 +51,14 @@ public class Product {
 	}
 
 
-	public String getDesc() {
-		return desc;
+
+	public String getDescription() {
+		return description;
 	}
 
 
-	public void setDesc(String desc) {
-		this.desc = desc;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 
