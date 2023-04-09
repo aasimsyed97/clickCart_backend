@@ -17,6 +17,22 @@ public class User {
 	private String password;
 	private String mobile;
 	
+	 
+	public User() {
+		
+	}
+
+
+	public User(Integer userId, String name, String userName, String email, String password, String mobile) {
+		super();
+		this.userId = userId;
+		this.name = name;
+		this.userName = userName;
+		this.email = email;
+		this.password = password;
+		this.mobile = mobile;
+	} 
+	
 	
 
 }
