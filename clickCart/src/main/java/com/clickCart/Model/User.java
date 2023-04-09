@@ -91,6 +91,13 @@ public class User {
 
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
+	}
+
+
+	@Override
+	public String toString() {
+		return "User [userId=" + userId + ", name=" + name + ", userName=" + userName + ", email=" + email
+				+ ", password=" + password + ", mobile=" + mobile + "]";
 	} 
 	
 	
