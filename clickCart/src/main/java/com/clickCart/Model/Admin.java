@@ -11,6 +11,18 @@ public class Admin {
      private String name;
      private String username;
      private String password;
+	public Admin() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Admin(Integer adminId, String name, String username, String password) {
+		super();
+		this.adminId = adminId;
+		this.name = name;
+		this.username = username;
+		this.password = password;
+	}
      
 	
+      
 }
