@@ -21,14 +21,6 @@ public class Product {
 	}
 
 
-	public Product( String name, String desc, String url, Integer price) {
-		super();
-		
-		this.name = name;
-		this.description = desc;
-		this.url = url;
-		this.price = price;
-	}
 
 
 	public Integer getId() {
