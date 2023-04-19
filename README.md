@@ -74,11 +74,3 @@ Backend of ecommerce website using springBoot.
     spring.datasource.password=root
 ```
 
-# API Root Endpoint
-```
-https://localhost:8888/
-```
-```
-http://localhost:8888/swagger-ui/
-```
-# API Reference
